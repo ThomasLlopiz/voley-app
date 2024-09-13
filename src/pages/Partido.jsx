@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Select from "../components/Select";
 import FormatCellContent from "../components/FormatCellContent";
-import { useNavigate } from "react-router-dom";
-import { ActionButtons } from "../components/ActionButtons";
+import ActionButtons from "../components/ActionButtons";
 
 export const Partido = () => {
-  const navigate = useNavigate();
-
   const [tableData, setTableData] = useState({
     set1: {
       local: Array(1).fill(Array(10).fill("")),
@@ -95,57 +92,8 @@ export const Partido = () => {
     }
   };
 
-  const handleReset = () => {
-    setTableData({
-      set1: {
-        local: Array(1).fill(Array(10).fill("")),
-        visitante: Array(1).fill(Array(10).fill("")),
-      },
-      set2: {
-        local: Array(1).fill(Array(10).fill("")),
-        visitante: Array(1).fill(Array(10).fill("")),
-      },
-      set3: {
-        local: Array(1).fill(Array(10).fill("")),
-        visitante: Array(1).fill(Array(10).fill("")),
-      },
-    });
-    setHistory({
-      set1: { local: [], visitante: [] },
-      set2: { local: [], visitante: [] },
-      set3: { local: [], visitante: [] },
-    });
-    localStorage.removeItem("tableData");
-  };
-
-  const handleUndo = () => {
-    if (selectedTable && history[selectedSet][selectedTable].length > 0) {
-      setTableData({
-        ...tableData,
-        [selectedSet]: {
-          ...tableData[selectedSet],
-          [selectedTable]:
-            history[selectedSet][selectedTable][
-              history[selectedSet][selectedTable].length - 1
-            ],
-        },
-      });
-      setHistory({
-        ...history,
-        [selectedSet]: {
-          ...history[selectedSet],
-          [selectedTable]: history[selectedSet][selectedTable].slice(0, -1),
-        },
-      });
-    }
-  };
-
   const handleSelectChange = (e) => {
     setSelectedSet(e.target.value);
-  };
-
-  const volver = () => {
-    navigate("/");
   };
 
   return (
@@ -275,9 +223,12 @@ export const Partido = () => {
         </div>
       </main>
       <ActionButtons
-        onReset={handleReset}
-        onUndo={handleUndo}
-        onBack={volver}
+        tableData={tableData}
+        setTableData={setTableData}
+        history={history}
+        setHistory={setHistory}
+        selectedSet={selectedSet}
+        setSelectedSet={setSelectedSet}
       />
     </div>
   );
