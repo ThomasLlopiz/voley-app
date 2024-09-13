@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import Select from "../components/Select";
 import FormatCellContent from "../components/FormatCellContent";
 import { useNavigate } from "react-router-dom";
+import { ActionButtons } from "../components/ActionButtons";
 
 export const Partido = () => {
-  // Usa el hook useNavigate
   const navigate = useNavigate();
 
-  // Estados para cada set
   const [tableData, setTableData] = useState({
     set1: {
       local: Array(1).fill(Array(10).fill("")),
@@ -273,20 +272,13 @@ export const Partido = () => {
               </tbody>
             </table>
           </div>
-
-          <div className="fixed bottom-0 right-0 mt-4 space-x-4 pr-4">
-            <button onClick={handleReset} className="bg-red-500 p-2 rounded">
-              Resetear
-            </button>
-            <button onClick={handleUndo} className="bg-yellow-500 p-2 rounded">
-              Deshacer
-            </button>
-            <button onClick={volver} className="bg-blue-500 p-2 rounded">
-              Volver
-            </button>
-          </div>
         </div>
       </main>
+      <ActionButtons
+        onReset={handleReset}
+        onUndo={handleUndo}
+        onBack={volver}
+      />
     </div>
   );
 };
