@@ -10,7 +10,7 @@ const FormatCellContent = ({ content }) => {
   let newContent = [];
 
   for (let i = 0; i < numbers.length; i += 3) {
-    newContent.push(<div key={i}>{numbers.slice(i, i + 3).join(" ")}</div>);
+    newContent.push(<div key={i}>{numbers.slice(i, i + 2).join(" ")}</div>);
   }
 
   return <div>{newContent}</div>;
