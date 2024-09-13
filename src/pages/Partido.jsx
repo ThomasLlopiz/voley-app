@@ -101,6 +101,11 @@ export const Partido = () => {
 
   return (
     <div className="bg-black text-white w-full mx-auto relative">
+      <select className="fixed bg-black top-0 right-0" name="sets" id="sets">
+        <option value="set1">SET1</option>
+        <option value="set2">SET2</option>
+        <option value="set3">SET3</option>
+      </select>
       <main>
         <div className="flex flex-col text-left mt-4 w-full">
           <div>
