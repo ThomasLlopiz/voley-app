@@ -26,7 +26,6 @@ export const ElegirEquipos = () => {
 
   const handleJugar = () => {
     if (equipoSeleccionado1 && equipoSeleccionado2) {
-      // Guardar equipos seleccionados en localStorage
       localStorage.setItem("equipoSeleccionado1", equipoSeleccionado1);
       localStorage.setItem("equipoSeleccionado2", equipoSeleccionado2);
       navigate("/partido");
