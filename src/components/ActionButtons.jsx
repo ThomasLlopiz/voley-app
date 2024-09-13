@@ -7,7 +7,7 @@ export const ActionButtons = ({ onReset, onUndo, onBack }) => {
         Resetear
       </button>
       <button onClick={onUndo} className="bg-yellow-500 p-2 rounded">
-        Deshacer
+        Terminar
       </button>
       <button onClick={onBack} className="bg-blue-500 p-2 rounded">
         Volver
