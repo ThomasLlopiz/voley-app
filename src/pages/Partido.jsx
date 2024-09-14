@@ -112,11 +112,11 @@ export const Partido = () => {
 
       <main>
         <div className="flex flex-col text-left w-full">
-          <div>
-            <h2 className="text-center font-bold text-blue-600">
+          <div className="flex w-full">
+            <h2 className="text-center rotate-90 font-bold text-blue-600 absolute left-0 top-10">
               {equipoLocal}
             </h2>
-            <table className="w-full mx-auto text-left relative">
+            <table className="w-full mx-auto text-left relative ml-10">
               <thead>
                 <tr>
                   {[
@@ -167,11 +167,11 @@ export const Partido = () => {
             </table>
           </div>
 
-          <div className="w-full absolute mt-28">
-            <h2 className="text-center font-bold text-blue-600">
+          <div className="flex w-full">
+            <h2 className="text-center rotate-90 font-bold text-blue-600 absolute left-0 top-52">
               {equipoVisitante}
             </h2>
-            <table className="w-full mx-auto text-left relative">
+            <table className="w-full mx-auto text-left relative ml-10">
               <thead>
                 <tr>
                   {[
@@ -220,7 +220,7 @@ export const Partido = () => {
                 ))}
               </tbody>
             </table>
-          </div>  
+          </div>
         </div>
       </main>
       <ActionButtons
