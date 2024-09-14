@@ -90,10 +90,10 @@ export const Creacion = () => {
   };
 
   return (
-    <main className="flex items-start justify-center mt-20">
+    <main className="flex flex-col gap-4 mx-auto w-full mt-20">
       <ElegirEquipos></ElegirEquipos>
       {/* EQUIPOS */}
-      <div className="bg-white p-4 rounded-lg shadow-md text-black w-1/2 max-w-lg top-24 left-0 ">
+      <div className="w-full bg-white p-4 rounded-lg shadow-md text-black">
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <input
@@ -145,7 +145,7 @@ export const Creacion = () => {
         </div>
       </div>
       {/* JUGADORES */}
-      <div className="w-1/2 max-w-lg p-4 ml-4 bg-white rounded-lg shadow-md text-black  right-0 top-24">
+      <div className="w-full bg-white p-4 rounded-lg shadow-md text-black">
         <div className="mb-4">
           <select
             id="equipoSelect"
