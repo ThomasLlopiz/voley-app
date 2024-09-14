@@ -99,7 +99,7 @@ export const Partido = () => {
   return (
     <div className="bg-black text-white w-full mx-auto relative">
       <select
-        className="fixed bg-black top-0 right-0"
+        className="fixed bottom-0 left-0 border border-white bg-black text-white p-2 rounded-md"
         name="sets"
         id="sets"
         value={selectedSet}
@@ -109,8 +109,9 @@ export const Partido = () => {
         <option value="set2">SET2</option>
         <option value="set3">SET3</option>
       </select>
+
       <main>
-        <div className="flex flex-col text-left mt-4 w-full">
+        <div className="flex flex-col text-left w-full">
           <div>
             <h2 className="text-center font-bold text-blue-600">
               {equipoLocal}
@@ -166,7 +167,7 @@ export const Partido = () => {
             </table>
           </div>
 
-          <div className="w-full absolute mt-44">
+          <div className="w-full absolute mt-36">
             <h2 className="text-center font-bold text-blue-600">
               {equipoVisitante}
             </h2>
