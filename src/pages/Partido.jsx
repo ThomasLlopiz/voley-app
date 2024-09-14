@@ -167,7 +167,7 @@ export const Partido = () => {
             </table>
           </div>
 
-          <div className="w-full absolute mt-36">
+          <div className="w-full absolute mt-28">
             <h2 className="text-center font-bold text-blue-600">
               {equipoVisitante}
             </h2>
@@ -220,7 +220,7 @@ export const Partido = () => {
                 ))}
               </tbody>
             </table>
-          </div>
+          </div>  
         </div>
       </main>
       <ActionButtons
