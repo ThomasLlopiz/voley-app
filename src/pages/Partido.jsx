@@ -171,7 +171,7 @@ export const Partido = () => {
             <h2 className="text-center rotate-90 font-bold text-blue-600 absolute left-0 top-52">
               {equipoVisitante}
             </h2>
-            <table className="w-full mx-auto text-left relative ml-10">
+            <table className="w-full mx-auto text-left relative ml-10 mt-32">
               <thead>
                 <tr>
                   {[
